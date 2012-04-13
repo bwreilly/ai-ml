@@ -12,4 +12,4 @@ A [Kalman filter](https://en.wikipedia.org/wiki/Kalman_filter) attempts to deter
 
 ##  Credit
 
-The code is original, but some has been derived from work done in the [Stanford Introduction to Artificial Intelligence](https://www.ai-class.com/) class and the [Udacity course CS373: Programming a Robot Car](http://www.udacity.com/overview/Course/cs373/). I am deeply indebted to the tireless efforts of those involved in the making of those classes (Sebastian Thrun, Peter Norvig, and )
+Some has been derived from work done in the [Stanford Introduction to Artificial Intelligence](https://www.ai-class.com/) class and the [Udacity course CS373: Programming a Robot Car](http://www.udacity.com/overview/Course/cs373/), modified for clarity and reusability. I am deeply indebted to the efforts of those involved in the making of those classes (Sebastian Thrun, Peter Norvig, and the staffs at ai-class.com and udacity.com)

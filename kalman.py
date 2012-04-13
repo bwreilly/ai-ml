@@ -49,6 +49,7 @@ class Kalman(object):
         x = initial state (location and velocity)
         P = initial uncertainty
         """
+        # credit to Sebastian Thrun for the matrix operations
         I = identity(P.shape)
         for m in measurements:
             # prediction
