@@ -16,4 +16,4 @@ A [particle filter](https://en.wikipedia.org/wiki/Particle_filter) also does sta
 
 ##  Credit
 
-Some has been derived from work done in the [Stanford Introduction to Artificial Intelligence](https://www.ai-class.com/) class and the [Udacity course CS373: Programming a Robot Car](http://www.udacity.com/overview/Course/cs373/), modified for clarity and reusability. I am deeply indebted to the efforts of those involved in the making of those classes (Sebastian Thrun, Peter Norvig, and the staffs at ai-class.com and udacity.com)
+Some of the implementations have been derived from work done in the [Stanford Introduction to Artificial Intelligence](https://www.ai-class.com/) class and the [Udacity course CS373: Programming a Robot Car](http://www.udacity.com/overview/Course/cs373/), modified for clarity and reusability. I am deeply indebted to the efforts of those involved in the making of those classes (Sebastian Thrun, Peter Norvig, and the staffs at ai-class.com and udacity.com)
