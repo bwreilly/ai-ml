@@ -1,0 +1,24 @@
+<h2>What</h2>
+
+<p>Basic implementations of some machine learning/ai algorithms.</p>
+
+<h2>Why</h2>
+
+<p>Reference or examples/templates for other projects.</p>
+
+<h3>Kalman Filter</h3>
+
+<p><a href="docs/kalman.html">Annotated Source</a></p>
+
+<p>A <a href="https://en.wikipedia.org/wiki/Kalman_filter">Kalman filter</a> attempts to determine state from noisy input data, typically paired with positional shifting. In this implementation, the predict step offers a method of convolution (state becomes less certain) typical of movement and measurement (in which the state is likely to become more certain). Most common <a href="https://en.wikipedia.org/wiki/Kalman_filter#Applications">applications</a> are in reference, navigation, and guidance.</p>
+
+<h3>Particle Filter</h3>
+
+<p><a href="docs/pfilter.html">Annotated Source</a></p>
+
+<p>A <a href="https://en.wikipedia.org/wiki/Particle_filter">particle filter</a> also does state estimation, but has several advantages over Kalman filters and other methods. A pfilter can be used in continuous space and on multimodal distributions (Kalman filters only work on unimodal distributions). Implementation is also fairly easy. However, efficiency can suffer significantly in large state spaces. <a href="http://www.youtube.com/watch?v=4S-sx5_cmLU&amp;feature=youtu.be&amp;t=1m24s">Here</a> is a good visualization of the process.</p>
+
+<h2>Credit</h2>
+
+<p>Some of the implementations have been derived from work done in the <a href="https://www.ai-class.com/">Stanford Introduction to Artificial Intelligence</a> class and the <a href="http://www.udacity.com/overview/Course/cs373/">Udacity course CS373: Programming a Robot Car</a>, modified for clarity and reusability. I am deeply indebted to the efforts of those involved in the making of those classes (Sebastian Thrun, Peter Norvig, and the staffs at ai-class.com and udacity.com)</p>
+
