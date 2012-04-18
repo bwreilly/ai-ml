@@ -4,9 +4,8 @@
 def update(m1, v1, m2, v2):
     """ Calculate new mean and variance given priors
 
-    This will reduce the variance, increasing convidence of the estimate.
+        This will reduce the variance, increasing convidence of the estimate.
     """
-    # Bayes rule
     mean = (v2 * m1 + v1 * m2) / (v1 + v2)
     var = 1 / (1 / v1 + 1 / v2)
     return mean, var
@@ -28,19 +27,11 @@ class Kalman(object):
     """ Kalman filter implementation, see https://en.wikipedia.org/wiki/Kalman_filter """
     def __init__(self, dt, F, H, R, u):
         """
-        dt = delta time
-        F = next state function
-        H = measurement function
-        R = measurement uncertainty
-        u = external motion
-
-        examples:
-        dt = 0.1
-        P = matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 1000., 0], [0, 0, 0, 1000.]])
-        F = matrix([[1, 0, 1, 0], [0, 1, 0, 1], [0, 0, 1, 0], [0, 0, 0, 1]])
-        H = matrix([[1, 0, 0, 0], [0, 1, 0, 0]])
-        R = matrix([[dt, 0], [0, dt]])
-        u = matrix([[0.], [0.], [0.], [0.]])
+                dt = delta time
+                F = next state function
+                H = measurement function
+                R = measurement uncertainty
+                u = external motion
         """
         self.dt = dt
         self.F = F
@@ -50,17 +41,17 @@ class Kalman(object):
 
     def filter(self, x, P, measurements):
         """
-        x = initial state (location and velocity)
-        P = initial uncertainty
+                x = initial state (location and velocity)
+                P = initial uncertainty
         """
-        # credit to Sebastian Thrun for the matrix operations
+        # (Credit to Sebastian Thrun for the matrix operations)
         I = identity(P.shape)
         for m in measurements:
-            # Prediction
+            # Prediction step. Typically movement.
             x = (self.F * x) + self.u
             P = self.F * P * self.F.transpose()
 
-            # Measurement update
+            # Measurement update.
             Z = matrix(m)
             y = Z.transpose() - (self.H * x)
             S = self.H * P * self.H.transpose() + self.R
