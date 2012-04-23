@@ -43,10 +43,10 @@ def generate_particles(point, k, mdist=None):
 
 def normalize(particles):
     """ Transforms weighted particles into a bayesian distribution
-            >>> normalize([(1, 2), 50, (3, 4), 20, (3, 3), 30])
-            >   [(1, 2), 0.19354838709677416,
-                 (3, 3), 0.3225806451612903,
-                 (3, 4), 0.4838709677419355]
+            >>> normalize([((1, 2), 30), ((3, 4), 20), ((3, 3), 300)])
+            >   [((1, 2), 0.08571428571428572),
+                 ((3, 4), 0.05714285714285714),
+                 ((3, 3), 0.8571428571428571)]
     """
     weights = []
     for p in particles:
